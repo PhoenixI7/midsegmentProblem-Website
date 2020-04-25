@@ -1,0 +1,21 @@
+#inputMenu {
+    float: left;
+    padding-left: 2.5%;
+}
+
+#calculator {
+    float: left;
+    width: 60%; 
+    height: 800px;
+}
+
+#loginSystem {
+    text-align: center;
+}
+
+#login {
+    font-size: xx-large;
+    margin-top: 20%;
+    padding: 30px;
+
+}

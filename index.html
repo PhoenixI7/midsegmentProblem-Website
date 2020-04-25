@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <! –– Replace "???" with your Desmos API key ––>
+    <script src="https://www.desmos.com/api/v1.4/calculator.js?apiKey=???"></script> 
+    <title>Midpoint Problem Website</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.6.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.6.2/firebase-auth.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/7.6.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.6.2/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+  </head>
+  <body>
+    <div id="loginSystem">
+      <div id="loginButton">
+        <button id="login" onclick="googleLogin()">Login with Google</button>
+      </div>
+  
+      <h4 id="userId"></h4>
+    </div>
+
+    <div id="documentData">
+      <div id="calculator"></div>
+
+      <div id="inputMenu">
+        <h3> Coordinates A: <form>
+            <input type="number" id="aXc">
+            <input type="number" id="aYc">
+          </form>
+        </h3>
+
+        <h3> Coordinates B: <form>
+            <input type="number" id="bXc">
+            <input type="number" id="bYc">
+          </form>
+        </h3>
+
+        <h3> Coordinates C: <form>
+            <input type="number" id="cXc">
+            <input type="number" id="cYc">
+          </form>
+        </h3>
+
+        <h3> Process Length <form>
+            <input type="number" id="processLength">
+          </form>
+        </h3>
+
+        <button onclick="setCoord()">Set Coordinates</button>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <h3 id="centerPoint">The Center is at:</h3>
+        
+      </div>
+    </div>
+    <script src="inputs.js"></script>
+    <script src="midsegmentProblem.js"></script>
+    <link rel="stylesheet" href="index.css">
+  </body>
+
+</html>
